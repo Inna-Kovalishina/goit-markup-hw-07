@@ -1,0 +1,135 @@
+/* Стилізація Header */
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.container__main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+/* Стилізація логотипу */
+.logo {
+    color: var(--accent-color);
+    font-family: var(--second-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+
+.header__logo--decorated {
+    color: var(--additional-text-color);
+}
+
+.header__logo {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+/* Стилізація навігації */
+.header-nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.header-nav__link {
+    position: relative;
+
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-nav__link--current,
+.header-nav__link:hover,
+.header-nav__link:focus {
+    color: var(--accent-color);
+}
+
+.header-nav__link::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translate(-50%);
+    display: block;
+
+    color: var(--primary-text-color);
+    width: 0;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+
+    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-nav__link--current::after,
+.header-nav__link:hover::after,
+.header-nav__link:focus::after {
+    width: 100%;
+}
+
+
+/* Стилізація контактів */
+.header-contact__list {
+    display: flex;
+    margin-left: auto;
+}
+
+/* .list-header .item + .item {
+    margin-left: 50px;
+} */
+
+.header-contact__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-contact__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.header-contact__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-contact__link:hover,
+.header-contact__link:focus {
+    color: var(--accent-color);
+}
+
+.header-contact__icon {
+    fill: currentColor;
+    margin-right: 10px;
+}
