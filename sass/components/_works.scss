@@ -3,10 +3,6 @@
     padding-top: 0;
 }
 
-.works__title {
-    margin-bottom: 50px;
-}
-
 .works__list {
     display: flex;
     align-items: center;
@@ -14,10 +10,10 @@
 
 .works__item {
     display: block;
-}
 
-.works__item:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
 .works__overlay-image {

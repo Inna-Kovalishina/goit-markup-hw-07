@@ -1,14 +1,3 @@
-/* Стилізація секцій */
-.section__title {
-    color: var(--primary-text-color);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin-bottom: 50px;
-}
-
 /* Стилізація секції "Особливості" */
 
 .feature__list {
@@ -20,10 +9,10 @@
 .feature__item {
     display: block;
     max-width: 270px;
-}
 
-.feature__item:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
 .feature__picture {

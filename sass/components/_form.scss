@@ -34,6 +34,10 @@
     top: 50%;
     transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .input:focus + & {
+        fill: var(--accent-color);
+    }
 }
 
 .input {
@@ -52,14 +56,10 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.input:focus {
-    border-color: var(--accent-color);
-}
-
-.input:focus+.input__icon {
-    fill: var(--accent-color);
+    &:focus {
+        border-color: var(--accent-color);
+    }
 }
 
 .input__comment {
@@ -95,11 +95,28 @@
     background-color: var(--primary-background-color);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .checkbox__input:checked + & {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+
+    .checkbox__input:focus + & {
+        border-color: var(--accent-color);
+    }
+
+    .checkbox__input:checked:focus + & {
+        border-color: var(--secondary-background-color);
+    }
 }
 
 .checkbox__icon {
     opacity: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .checkbox__input:checked + .checkbox__wrap & {
+        opacity: 1;
+    }
 }
 
 .checkbox__input {
@@ -112,23 +129,6 @@
     padding: 0;
     border: 0;
     opacity: 0;
-}
-
-.checkbox__input:checked+.checkbox__wrap {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-.checkbox__input:focus+.checkbox__wrap {
-    border-color: var(--accent-color);
-}
-
-.checkbox__input:checked:focus+.checkbox__wrap {
-    border-color: var(--secondary-background-color);
-}
-
-.checkbox__input:checked+.checkbox__wrap .checkbox__icon {
-    opacity: 1;
 }
 
 .checkbox__link {
@@ -178,9 +178,9 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     cursor: pointer;
-}
 
-.form__button:hover,
-.form__button:focus {
-    background-color: #188CE8;
+    &:hover,
+    &:focus {
+        background-color: #188CE8;
+    }
 }
