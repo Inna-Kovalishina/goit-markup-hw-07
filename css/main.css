@@ -908,15 +908,12 @@ body {
   margin-bottom: 20px;
   resize: none;
 }
-
 .input__comment::-moz-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-
 .input__comment:-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-
 .input__comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
@@ -978,7 +975,6 @@ body {
   display: block;
   color: var(--accent-color);
 }
-
 .checkbox__link::after {
   content: "";
   position: absolute;
